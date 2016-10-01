@@ -16,7 +16,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot Oct 1, 2016, 9.13.14 AM" translatesAutoresizingMaskIntoConstraints="NO" id="Mm0-Ql-0FU"/>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mm0-Ql-0FU" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="9rh-Xf-sB8"/>
+                            <constraint firstItem="Mm0-Ql-0FU" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Rdn-jH-4Sn"/>
+                            <constraint firstAttribute="trailing" secondItem="Mm0-Ql-0FU" secondAttribute="trailing" id="SdE-lx-cKe"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Mm0-Ql-0FU" secondAttribute="bottom" id="qCq-DC-4lx"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +33,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Simulator Screen Shot Oct 1, 2016, 9.13.14 AM" width="750" height="1334"/>
+    </resources>
 </document>
