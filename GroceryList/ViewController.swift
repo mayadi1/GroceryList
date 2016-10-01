@@ -27,6 +27,8 @@ class ViewController: UIViewController {
             entryItem.text = nItem?.item
             entryQty.text = nItem?.qty
             entryNote.text = nItem?.note
+            entryItem.enabled = false
+            entryNote.enabled = false
         }
     }
 
