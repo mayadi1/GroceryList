@@ -29,6 +29,7 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.backgroundColor = UIColor.redColor()
         
         frc = getFetchedResultsController()
         frc.delegate = self
@@ -38,16 +39,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
             print("could not fetch results")
         }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -75,23 +66,14 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         let list = frc.objectAtIndexPath(indexPath) as! List
         cell.textLabel?.text = list.item
-        let qty = list.qty
-        let note = list.note
+        let qty = (list.qty)!
+        let note = (list.note)!
         cell.detailTextLabel!.text = "Qty: \(qty) - \(note)"
         
         return cell
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -105,22 +87,6 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
     }
     
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -137,6 +103,4 @@ class TableViewController: UITableViewController, NSFetchedResultsControllerDele
             print("\(nItem)")
         }
     }
-    
-
 }

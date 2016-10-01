@@ -212,7 +212,6 @@
 					};
 					E9DE00351BCC828B002DF99B = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 99RK49NW65;
 						TestTargetID = E9DE00131BCC828A002DF99B;
 					};
 				};
@@ -470,6 +469,7 @@
 		E9DE00461BCC828B002DF99B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GroceryListUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.msen.GroceryListUITests;
@@ -482,6 +482,7 @@
 		E9DE00471BCC828B002DF99B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GroceryListUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.msen.GroceryListUITests;
